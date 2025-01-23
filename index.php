@@ -1,19 +1,22 @@
 <?php
 
-function somar($num1, $num2, $num3 = null){
-    if ($num3){ return "Número 1:  $num1, Número 2: $num2, Número 3: $num3";
+function somar(float $num1, float $num2, float $num3 = null):float
+{
+    if ($num3){ return $num1 + $num2 + $num3;
     }else
-    return "Número 1:  $num1, Número 2: $num2, Número 3: $num3";
+    return $num1 + $num2 + $num3;
 }
 
 
-function verificaIdade($anoNascimento){
+function verificaIdade(int $anoNascimento): int
+{
     $anoAtual = date('Y');
     $idade = $anoAtual - $anoNascimento;
     return $idade;
 }
 
-function portaoDeBalada($anoNascimento, $acompanhado = false){
+function portaoDeBalada(int $anoNascimento, bool $acompanhado = false): string
+{
     $idadeParaEntrarBalada = 18;
     $idade = verificaIdade($anoNascimento);
     if ($idade >= $idadeParaEntrarBalada){
