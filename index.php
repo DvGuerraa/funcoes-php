@@ -90,3 +90,41 @@ function diminuir (float $n1, float $n2): float
     return $n1 - $n2;
 }
 echo diminuir (n2: -30, n1:-43);
+
+
+
+/**
+ * Transforma número em dia da semana
+ * 
+ * @param int $dia Número que relaciona o dia
+ * 
+ * @return string Dia da semana
+ */
+function diaSemanaSwitch(int $dia): string 
+{
+    switch ($dia){
+        case 1:
+            return 'Domingo';
+            break;
+        case 2: 
+            return 'Segunda-Feira';
+            break;
+        case 3:
+            return 'Terça-Feira';
+            break;
+        case 4:
+            return 'Quarta-Feira';
+            break;
+        case 5: 
+            return 'Quinta-Feira';
+            break;
+        case 6: 
+            return 'Sexta-Feira';
+            break;
+        case 7:
+            return 'Sábado';
+            break;
+        default:
+        return 'Dia inválido';
+    }
+}
